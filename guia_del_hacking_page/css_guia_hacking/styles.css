@@ -1,0 +1,662 @@
+/* General */
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantiza que el cuerpo ocupe al menos el 100% del alto de la ventana */
+}
+
+/* Estilo de los botones */
+
+/*button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;*/
+    /*margin-top: 10px;*/
+/*}*/
+
+/*button:hover {
+    background-color: #45a049;
+}*/
+
+/* Estilos del botón de detalles */
+.btn-details {
+    background-color: #007bff; /* Color de fondo atractivo (azul) */
+    border: none; /* Quitar borde predeterminado */
+    color: white; /* Color del texto */
+    padding: 5px 10px; /* Relleno interno (alto y ancho) */
+    font-size: 14px; /* Tamaño de la fuente */
+    text-align: center; /* Alinear el texto al centro */
+    text-decoration: none; /* Quitar subrayado del texto */
+    display: inline-block; /* Hacer que el botón se comporte como un bloque en línea */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves para el color de fondo y la transformación */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+.btn-details:hover {
+    background-color: #0056b3; /* Cambiar el color de fondo al pasar el mouse (más oscuro) */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño del botón */
+}
+
+.btn-details:focus {
+    outline: none; /* Quitar el borde de enfoque predeterminado */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Agregar un efecto de enfoque personalizado */
+}
+
+/* Contenedor principal */
+.wrapper {
+    flex: 1; /* Expande el contenedor para ocupar el espacio restante */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del header */
+header {
+    background-color: #333333;
+    color: #e0e0e0;
+    padding: 10px 0;
+}
+
+header h1 a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+/* Estilo general para los tamaños */
+.size {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white; /* Color del texto */
+    border-radius: 4px; /* Bordes redondeados */
+    text-align: center;
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para la categoría Alta */
+.size.high {
+    background-color: #e74c3c; /* Rojo */
+}
+
+/* Estilo para la categoría Media */
+.size.medium {
+    background-color: #f39c12; /* Naranja */
+}
+
+/* Estilo para la categoría Principiante */
+.size.beginner {
+    background-color: #2ecc71; /* Verde */
+}
+
+
+/* Contenedor de contenido */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Estilos de los items */
+.item {
+    background-color: #2b2b2b;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: #333333;
+}
+
+.item-title,
+.badge,
+.size,
+.actions {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item-title {
+    width: 30%;
+}
+
+.badge {
+    width: 20%;
+    text-align: center;
+}
+
+.size {
+    width: 15%;
+    text-align: center;
+}
+
+.actions {
+    width: 35%;
+    text-align: right;
+}
+
+/* Distribución de las páginas */
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.page .item {
+    flex: 1 1 calc(33.333% - 15px);
+}
+
+/* Estilos de la paginación */
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#pagination button:hover {
+    background-color: #45a049;
+}
+
+#pagination button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+/* Estilos del popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%; /* Limita la altura máxima del popup */
+    position: relative;
+    overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup-text {
+    width: 100%;
+    text-align: center;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #d83c31;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    background: #c32d1e;
+}
+
+.modal-body {
+    padding: 20px;
+    color: #e1e1e1;
+    text-align: left;
+}
+
+
+/* Estilos del footer */
+.footer {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+/* Copyright */
+#copyright-style {
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilo para el enlace en el popup */
+#popup-description {
+    display: flex; /* Usar flexbox para el alineamiento */
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: center; /* Alinea horizontalmente el contenido */
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+}
+
+/* Estilo para la imagen en el popup */
+#popupImage {
+    width: 30px; /* Ajustar el tamaño deseado */
+    height: auto; /* Mantener la relación de aspecto */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+}
+
+/* Estilo para el texto en el popup */
+#popup-link-text {
+    display: inline-block;
+}
+
+/* Efecto de zoom al pasar el cursor por encima del enlace */
+#popup-description:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del enlace (imagen y texto) */
+}
+
+#popup-description:hover #popupImage {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+    margin-right: 15px; /* Ajusta el espacio cuando se hace zoom */
+}
+
+/* Estilo para la sección de introducción */
+#introduction {
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de comandos */
+.commands-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre los rectángulos */
+}
+
+/* Estilo para cada rectángulo de comando */
+.command-item {
+    flex: 1 1 calc(30% - 10px); /* Ajusta el tamaño del rectángulo y el espaciado */
+    min-width: 200px; /* Ancho mínimo del rectángulo */
+}
+
+.command-btn {
+    background-color: #2b2b2b; /* Fondo del rectángulo */
+    border: none; /* Sin borde */
+    color: #e0e0e0; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el rectángulo */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el fondo y el tamaño */
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: flex-start; /* Alinea el contenido al principio */
+}
+
+.command-btn:hover {
+    background-color: #333333; /* Color de fondo al pasar el cursor */
+    transform: scale(1.02); /* Agranda ligeramente el rectángulo al pasar el cursor */
+}
+
+.command-info {
+    display: flex;
+    align-items: center; /* Alinea el contenido verticalmente */
+    gap: 10px; /* Espacio entre el comando y la descripción */
+}
+
+.command-info h3 {
+    margin: 0;
+    font-size: 16px; /* Tamaño de la fuente del comando */
+    color: #4caf50; /* Color del comando */
+}
+
+.command-info p {
+    margin: 0;
+    font-size: 14px; /* Tamaño de la fuente de la descripción */
+    color: #e0e0e0; /* Color de la descripción */
+    white-space: nowrap; /* Evita el salto de línea en la descripción */
+    overflow: hidden; /* Oculta el desbordamiento del texto largo */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+}
+
+
+/* Estilo para el popup de comandos */
+.popup-content {
+    background-color: #2b2b2b; /* Fondo del popup */
+    color: #e0e0e0; /* Color del texto */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%; /* Aumento del ancho al 90% del contenedor padre */
+    max-width: 1000px; /* Aumento del ancho máximo a 1000 píxeles */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es largo */
+    max-height: 90vh; /* Limita la altura del popup a un porcentaje de la altura de la ventana */
+}
+
+/* Estilo para el área de terminal dentro del popup */
+/* Estilo para el área de terminal dentro del popup */
+.terminal-box {
+    background-color: #373737; /* Fondo de la terminal */
+    color: #d4d4d4; /* Color del texto en la terminal */
+    border: 1px solid #333; /* Borde para simular el terminal */
+    padding: 10px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace; /* Fuente de terminal */
+    white-space: pre-wrap; /* Mantiene el formato del texto con saltos de línea */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si el texto es demasiado ancho */
+    max-height: 300px; /* Limita la altura del área de terminal */
+    text-align: left; /* Alinea el texto a la izquierda */
+    display: block; /* Asegura que el contenedor ocupa toda la anchura disponible */
+    margin-left: 0; /* Alinea el contenedor a la izquierda del contenedor padre */
+    width: 100%; /* Asegura que el contenedor ocupa todo el ancho disponible dentro del popup */
+}
+
+/* Estilo para el mini contenedor de comando */
+.terminal-mini-box {
+    background-color: #373737; /* Fondo de la terminal */
+    color: #d4d4d4; /* Color del texto en la terminal */
+    border: 1px solid #333; /* Borde para simular el terminal */
+    padding: 2px 6px; /* Relleno interno */
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace; /* Fuente de terminal */
+    display: inline-block; /* Asegura que el div se ajusta al tamaño del contenido */
+    white-space: nowrap; /* Evita el salto de línea en el texto */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Aplicar estilo de terminal solo a bloques específicos */
+.terminal-box code {
+    display: block; /* Asegura que el código ocupa toda la anchura del contenedor */
+    background-color: #2d2d2d; /* Fondo para el bloque de código */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Estilo para la modal de descripción de comando */
+.modal-body {
+    padding: 20px;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+/* Estilos para la sección de explotación de puertos */
+
+.ports-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.port-title {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.port-service {
+    margin-right: 10px;
+}
+
+.port-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.port-item {
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.port-item:hover {
+    background-color: #333333;
+}
+
+.port-info {
+    color: #d4d4d4;
+}
+
+.btn-port-details {
+    background-color: #007bff; /* Color de fondo atractivo (azul) */
+    border: none; /* Quitar borde predeterminado */
+    color: white; /* Color del texto */
+    padding: 5px 10px; /* Relleno interno (alto y ancho) */
+    font-size: 14px; /* Tamaño de la fuente */
+    text-align: center; /* Alinear el texto al centro */
+    text-decoration: none; /* Quitar subrayado del texto */
+    display: inline-block; /* Hacer que el botón se comporte como un bloque en línea */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves para el color de fondo y la transformación */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+.btn-port-details:hover {
+    background-color: #0056b3; /* Cambiar el color de fondo al pasar el mouse (más oscuro) */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño del botón */
+}
+
+/* Estilo de los conocimientos basicos de hacking */
+
+#basic-knowledge {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2b2b2b; /* Fondo oscuro similar a otros elementos */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#basic-knowledge h2 {
+    font-size: 2rem;
+    color: #4caf50; /* Verde característico */
+    margin-bottom: 10px;
+}
+
+#basic-knowledge p {
+    font-size: 1.2rem;
+    color: #e0e0e0; /* Color de texto general */
+    margin-bottom: 20px;
+}
+
+.basic-section {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.basic-section h3 {
+    font-size: 1.5rem;
+    color: #e74c3c; /* Rojo para destacar los subtítulos */
+    margin-bottom: 15px;
+}
+
+.tools-list, .concepts-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    color: #e0e0e0; /* Color de texto general */
+}
+
+.tools-list li, .concepts-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.tools-list li::before, .concepts-list li::before {
+    content: "•";
+    color: #4caf50; /* Verde para los bullets */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.os-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.os-item {
+    max-width: 250px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #444; /* Borde oscuro */
+    border-radius: 8px;
+    background-color: #333333; /* Fondo similar a los items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.os-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+#kalilinux {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#parrotos{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#blackarch {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#gtfobins-estyle-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    color: whitesmoke; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+#gtfobins-estyle {
+    margin-left: 10px; /* Espacio entre la imagen y el texto */
+    font-size: 14px; /* Tamaño del texto */
+    color: whitesmoke; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+.logo-gtfobins {
+    height: 50px; /* Ajusta la altura de la imagen según sea necesario */
+}
+
+.container-title {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el título y el botón */
+    align-items: center; /* Centra verticalmente el título y el botón */
+    padding: 20px; /* Espacio alrededor del contenido de la caja */
+}
+
+.return-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.return-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.return-button:focus {
+    outline: none;
+}

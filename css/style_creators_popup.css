@@ -1,0 +1,128 @@
+/* Estilos del popup de creadores */
+.creator-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+}
+
+.creator-popup-content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s ease;
+    max-height: 80vh; /* Limita la altura del popup */
+    overflow-y: auto; /* Añade una barra de desplazamiento si es necesario */
+}
+
+.creator-popup-content h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #ff4c4c;
+}
+
+.creator-btn-close {
+    position: absolute;
+    top: 10px; /* Ajusta esta posición si es necesario */
+    right: 10px; /* Ajusta esta posición si es necesario */
+    background: #d83c31;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    font-size: 16px; /* Ajusta el tamaño de la X si es necesario */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.creator-btn-close:hover {
+    background: #e04444;
+}
+
+/* Estilo para la lista de creadores */
+.creator-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.creator-item {
+    background-color: #2b2b2b;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.creator-item:hover {
+    background-color: #353535;
+}
+
+.creator-item span {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.creator-item .rank {
+    font-weight: bold;
+    color: #ff4c4c;
+}
+
+.creator-item .name {
+    flex: 1;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.creator-item .machines {
+    font-style: italic;
+    color: #b3b3b3;
+}
+
+/* Animación de aparición del popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Asegura que el contenido sea responsive */
+@media (max-width: 768px) {
+    .creator-popup-content {
+        width: 90%;
+    }
+
+    .creator-popup-content h2 {
+        font-size: 18px;
+    }
+
+    .creator-item span {
+        font-size: 14px;
+    }
+}

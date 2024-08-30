@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Fira Code', monospace;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333333;
+}
+
+.header-container h1 {
+    margin: 0;
+    padding-left: 20px;
+    color: #e0e0e0;
+    font-weight: bold;
+    /* Negrita para el título */
+}
+
+.header-container .return-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    /* Tamaño aumentado del botón */
+    font-size: 16px;
+    /* Tamaño del texto aumentado */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    /* Negrita para el texto del botón */
+}
+
+.header-container .return-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.header-container .return-button:focus {
+    outline: none;
+}
+
+.button-container {
+    text-align: right;
+}
+
+.footer {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}

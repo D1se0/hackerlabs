@@ -1,0 +1,301 @@
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+/*
+.auth-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.auth-button:hover {
+    background-color: #45a049;
+}
+*/
+.popup-overlay-login {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content-login {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px; /* Ajustado a un tamaño más adecuado */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
+    margin: auto; /* Centra el modal horizontalmente */
+    margin-top: 50px; /* Ajusta la distancia desde la parte superior de la pantalla */
+}
+
+/* Estilo de la cabecera del modal */
+.popup-content-login h2 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center; /* Centra el texto del título */
+}
+
+/* Estilo del botón de cerrar */
+.btn-close-general {
+    position: absolute;
+    top: 10px; /* Ajusta según la altura del modal */
+    right: 10px; /* Ajusta según el ancho del modal */
+    background: #d83c31;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px; /* Centra el texto verticalmente */
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Añadido para mejor visibilidad */
+    display: flex; /* Usa flexbox para alinear el contenido */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-close-general:hover {
+    background: #c32d1e;
+}
+
+/* Estilos específicos para el modal de inicio de sesión */
+/* Ajuste para el modal de inicio de sesión */
+#loginModal .popup-content-login {
+    width: 90%;
+    max-width: 500px; /* Ajustado para el ancho del modal */
+    /* Asegúrate de que el modal se centre verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto; /* Centra el modal horizontalmente */
+}
+
+#loginModal input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #4caf50;
+    border-radius: 6px;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+#loginModal input:focus {
+    border-color: #45a049;
+    outline: none;
+}
+
+#loginModal button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto;
+}
+
+#loginModal button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos específicos para el modal de perfil */
+#profileModal .popup-content-login {
+    width: 90%;
+    max-width: 500px; /* Ajustado para hacerlo un poco más ancho */
+    margin-top: 70px; /* Distancia desde la parte superior de la pantalla */
+}
+
+#profileModal input,
+#profileModal textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #4caf50;
+    border-radius: 6px;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+#profileModal input:focus,
+#profileModal textarea:focus {
+    border-color: #45a049;
+    outline: none;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+.profile-actions button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.save-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+}
+
+.logout-button {
+    background-color: #d83c31;
+    color: white;
+}
+
+.logout-button:hover {
+    background-color: #c32d1e;
+}
+
+/* Estilos específicos para el modal de flags */
+/* Ajuste para el modal de flags */
+#flagsModal .popup-content-login {
+    width: 90%;
+    max-width: 500px; /* Ajustado para el ancho del modal */
+    /* Asegúrate de que el modal se centre verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto; /* Centra el modal horizontalmente */
+}
+
+#validatedFlagsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo del contenedor de progreso */
+.progress-container {
+    width: 100%;
+    background-color: #2b2b2b;
+    border-radius: 6px;
+    margin: 15px 0;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 35px; /* Ajustar la altura total para incluir la barra y el texto */
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    color: white;
+    height: 25px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px; /* Centra el texto verticalmente */
+    font-size: 16px;
+    width: 0; /* Inicialmente el progreso está en 0% */
+    position: absolute;
+    top: 5px; /* Espaciado desde el borde superior para centrar dentro del contenedor */
+    left: 0;
+}
+
+.progress-text {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1; /* Mantener el texto encima de la barra */
+    pointer-events: none; /* Evita que el texto interfiera con clics */
+}
+
+.flags-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    width: calc(100% - 20px); /* Ancho del botón igual al contenedor menos padding */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+.flags-button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+    }
+
+    .auth-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .popup-content-login {
+        width: 95%;
+    }
+
+    #profileModal input,
+    #profileModal textarea,
+    #loginModal input {
+        width: calc(100% - 20px);
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-actions button {
+        width: 100%;
+    }
+
+    .progress-bar {
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .flags-button {
+        width: 100%;
+    }
+}
