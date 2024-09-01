@@ -1,0 +1,1020 @@
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333333;
+    color: #e0e0e0;
+    z-index: 1000;
+}
+
+header h1 a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    /*margin-top: 10px;*/
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.badge {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.facil .badge {
+    background-color: #8bc34a;
+}
+
+.medio .badge {
+    background-color: #e0a553;
+}
+
+.dificil .badge {
+    background-color: #d83c31;
+}
+
+.muy-facil .badge {
+    background-color: #43959b;
+    font-size: 11px;
+}
+
+/* Class for default difficulty (if needed) */
+.default-difficulty .badge {
+    background-color: gray; /* Gris o color de tu preferencia */
+}
+
+/* Estilos para los niveles de dificultad */
+/*.muy-facil {
+    color: #43959b; 
+}
+
+.facil {
+    color: #8bc34a; 
+}
+
+.medio {
+    color: #e0a553; 
+}
+
+.dificil {
+    color: #d83c31; 
+}*/
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+}
+
+#search::placeholder {
+    color: #a0a0a0;
+}
+
+.item {
+    background-color: #2b2b2b;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: #333333;
+}
+
+.actions .bi {
+    color: #4caf50;
+}
+
+.actions .bi:hover {
+    color: #45a049;
+}
+
+.item-title,
+.badge,
+.size,
+.actions {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item-title {
+    width: 30%;
+    text-align: left;
+}
+
+.badge {
+    width: 20%;
+    text-align: center;
+}
+
+.size {
+    width: 15%;
+    text-align: center;
+}
+
+.actions {
+    width: 35%;
+    text-align: right;
+}
+
+.row>.col-md-6 {
+    margin-bottom: 20px;
+}
+
+/* Ajustes específicos para los botones de dificultad */
+#botonmuyfacil,
+#botonfacil,
+#botonmedio,
+#botondificil,
+#botontodos {
+    padding: 8px 20px;
+    /* Ajusta el padding para cambiar la altura y el ancho del botón */
+    font-size: 15px;
+    /* Ajusta el tamaño del texto */
+    margin-top: 20px;
+    /* Añade espacio superior para separar los botones si es necesario */
+    line-height: 1.5;
+    /* Ajusta la altura de la línea para centrar el texto verticalmente */
+    display: inline-flex;
+    /* Usa inline-flex para alinear el contenido verticalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente dentro del botón */
+    justify-content: center;
+    /* Centra el contenido horizontalmente dentro del botón */
+    border-radius: 4px;
+    /* Asegura que el botón tenga bordes redondeados */
+}
+
+/* Ajuste específico para el botón "Todos" */
+#botontodos {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    /* Ajusta el padding para cambiar la altura y el ancho del botón */
+    font-size: 15px;
+    /* Ajusta el tamaño del texto */
+    margin-top: 20px;
+    /* Añade espacio superior para separar el botón si es necesario */
+}
+
+@media (max-width: 768px) {
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .badge {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+.content-dificulty {
+    padding: 15px 30px;
+    /* Ajusta el padding para cambiar la altura y el ancho del botón */
+    margin-top: -30px;
+    /* Añade espacio superior para separar el botón si es necesario */
+}
+
+/* Estilos del popup */
+/* Estilos del popup */
+.popup-overlay {
+    display: none;
+    /* Oculta el popup por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro con opacidad */
+    z-index: 1000;
+    /* Asegúrate de que esté por encima de otros elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup-text {
+    width: 70%;
+}
+
+.popup-logo {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.popup-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #d83c31;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    background: #c32d1e;
+}
+
+/* Estilos específicos para las dificultades */
+.difficulty span {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+.muy-facil .difficulty span {
+    background-color: #43959b;
+    /* Azul para Muy Fácil */
+}
+
+.facil .difficulty span {
+    background-color: #8bc34a;
+    /* Verde claro para Fácil */
+}
+
+.medio .difficulty span {
+    background-color: #e0a553;
+    /* Amarillo para Medio */
+}
+
+.dificil .difficulty span {
+    background-color: #d83c31;
+    /* Rojo para Difícil */
+}
+
+/* Estilos específicos para el popup de opciones */
+#popupOpciones {
+    display: none;
+    /* Ocultar el popup por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro con opacidad */
+    z-index: 1000;
+    /* Asegúrate de que esté por encima de otros elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    /* Ajusta el tamaño máximo del popup */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.popup-text {
+    width: 100%;
+    text-align: center;
+}
+
+.popup-logo {
+    display: none;
+    /* Ocultamos el logo en este popup */
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #d83c31;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    background: #c32d1e;
+}
+
+/* Estilos para las opciones dentro del popup */
+.options-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.option-item {
+    background: #333;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.option-item:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+    /* Ampliar ligeramente al pasar el ratón */
+}
+
+.option-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* Asegura que html y body ocupen toda la altura disponible */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox en el body para estructurar el layout */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Disposicion de la pagina pricipal para el footer */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenedor abarque toda la altura */
+}
+
+/* El contenido principal debe ocupar el espacio disponible */
+.content {
+    flex: 1;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para la mini imagen del autor en el modal de información */
+.info-author img {
+    width: 30px;
+    /* Imagen más pequeña */
+    height: 30px;
+    /* Imagen más pequeña */
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.info-author a {
+    font-size: 0.8rem;
+    /* Texto más pequeño */
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.info-author a:hover {
+    transform: scale(1.1);
+    /* Efecto hover más suave */
+}
+
+/* Asegura que el botón de cierre sea visible */
+.modal-dialog .modal-content .btn-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    /* Ajuste del tamaño de la 'X' */
+    opacity: 1;
+}
+
+.modal-dialog .modal-content .btn-close::before {
+    content: '×';
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Ajusta el tamaño del modal */
+.modal-dialog {
+    max-width: 40%;
+    /* Modal más pequeño */
+    margin: 30px auto;
+}
+
+.modal-content {
+    border-radius: 8px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #e1e1e1;
+}
+
+.modal-header {
+    background-color: #1e1e1e;
+    color: #e1e1e1;
+    border-bottom: 1px solid #444;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-body {
+    padding: 20px;
+    color: #e1e1e1;
+    text-align: center;
+    /* Centra el contenido del modal */
+}
+
+.modal-footer {
+    background-color: #1e1e1e;
+    border-top: 1px solid #444;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/*Estilos nombres del boton de opciones*/
+#options-hacking-community,
+#options-academy,
+#options-hackerlabsCtfs-tool,
+#options-sobre-nosotros,
+#options-send-machine,
+#autor-writeup {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        max-width: 90%;
+        padding: 10px;
+    }
+}
+
+/* Estilos de los logos ova y docker */
+/*
+#logo_ova {
+    width: 25px;
+    height: 25px;
+    margin-right: 5.2vw; /* Usa un margen basado en el ancho de la pantalla *//*
+    margin-left: -7vw; /* Ajusta el valor según sea necesario */
+/*}/*
+
+
+#logo_docker {
+    width: 25px;
+    height: 15px;
+    margin-right: 3.2vw; /* Usa un margen basado en el ancho de la pantalla */
+    /*margin-left: -5vw; /* Ajusta el valor según sea necesario */
+/*}*/
+
+/* Ajusta la imagen del popup de forma automatica */
+
+#popupImage {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+
+/* Ajuste para el botón de Ranking */
+#ranking-btn {
+    margin-right: -5rem;
+    margin-left: -10rem;
+}
+
+/* Estilo del fondo oscuro del popup */
+.popup-overlay-ranking {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con mayor opacidad */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    display: flex; /* Utilizar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilo del contenido del popup del ranking */
+.popup-content-ranking {
+    background-color: #121212; /* Color de fondo oscuro tipo hacker */
+    color: #e0e0e0; /* Color de texto claro */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Asegúrate de que el popup tenga un ancho máximo y se ajuste en la pantalla */
+    max-height: 80vh; /* Evitar que el popup sea más alto que la pantalla */
+    overflow-y: auto; /* Hacer que el contenido sea desplazable si es demasiado alto */
+}
+
+/* Estilo del botón de cierre del ranking */
+.btn-close-ranking {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none; /* Elimina el fondo del botón */
+    color: #e0e0e0; /* Color del texto claro */
+    border: none;
+    font-size: 1.6rem; /* Tamaño del texto de la 'X' */
+    cursor: pointer;
+    transition: color 0.3s;
+    /* Elimina el borde y el fondo */
+}
+
+.btn-close-ranking:hover {
+    color: #4caf50; /* Cambia el color de la 'X' al pasar el ratón */
+    border-radius: 50%;
+}
+
+/* Estilo del modal de Bootstrap */
+.modal-content {
+    background-color: #121212; /* Color de fondo oscuro tipo hacker */
+    color: #e0e0e0; /* Color de texto claro */
+    border-radius: 8px;
+}
+
+.modal-header {
+    border-bottom: none; /* Eliminar el borde inferior */
+}
+
+.modal-footer {
+    border-top: none; /* Eliminar el borde superior */
+}
+
+/* Estilo para el encabezado del ranking */
+.popup-content-ranking h3 {
+    background-color: #1f1f1f; /* Color de fondo del encabezado */
+    color: #4caf50; /* Color del texto en el encabezado */
+    padding: 0.5rem;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Estilo para la tabla de ranking */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem; /* Espacio arriba de la tabla */
+}
+
+.ranking-table th, .ranking-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid #444; /* Línea divisoria entre filas */
+}
+
+.ranking-table thead {
+    background-color: #1f1f1f; /* Color de fondo de los encabezados de la tabla */
+    color: #4caf50; /* Color del texto en los encabezados */
+}
+
+.ranking-table tbody tr:nth-child(even) {
+    background-color: #121212; /* Color de fondo para filas pares */
+}
+
+.ranking-table tbody tr:nth-child(odd) {
+    background-color: #0d0d0d; /* Color de fondo para filas impares */
+}
+
+.ranking-table tbody tr:hover {
+    background-color: #333; /* Color de fondo al pasar el ratón */
+}
+
+#copyright-style {
+    text-decoration: none;
+    color: white;
+}
+
+/* Cinta roja de advertencia */
+
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.ribbon {
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    width: 200px;
+    padding: 5px 0;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    font-size: 14px;
+}
+
+.ribbon::before, .ribbon::after {
+    content: "";
+    position: absolute;
+    border: 5px solid red;
+    z-index: -1;
+}
+
+.ribbon::before {
+    top: 100%;
+    left: 0;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.ribbon::after {
+    bottom: 100%;
+    right: 0;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+/* Estilos para el modal de información técnica */
+
+/* Estilos para la lista de técnicas y certificaciones */
+.info-list-infomation, .cert-list-infomation {
+    margin: 0;
+    padding: 0;
+}
+
+.info-item-infomation, .cert-item-infomation {
+    display: flex;
+    align-items: center;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.info-icon-infomation, .cert-icon-infomation {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.cert-item-infomation {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.cert-icon-infomation {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+/* Estilo para las líneas de separación */
+hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 20px 0;
+}
+
+/* Estilo botones siguiente y anterior */
+
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#pagination button:hover {
+    background-color: #45a049;
+}
+
+#pagination button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+/* Ajustes generales para adaptaciona a movil */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        margin: 5px 0;
+        padding: 10px 5px;
+    }
+
+    .actions .bi {
+        font-size: 1rem;
+    }
+}
+
+/* Mejoras para el header en versión móvil */
+header {
+    background-color: #333333;
+    color: #e0e0e0;
+    z-index: 2000; /* Aumenta el z-index para que esté por encima de otros elementos */
+    padding: 10px 15px; /* Añade padding para dar más espacio */
+    position: sticky; /* Fija el header en la parte superior al hacer scroll */
+    top: 0; /* Asegura que el header esté en la parte superior */
+    display: flex; /* Flexbox para alinear los elementos en el header */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Ajustes específicos para móvil */
+@media (max-width: 768px) {
+    header {
+        padding: 8px 10px; /* Ajusta el padding para móviles */
+        flex-direction: column; /* Cambia la dirección de los elementos para apilar en columna */
+        align-items: flex-start; /* Alinea los elementos al inicio en columna */
+    }
+
+    .container {
+        width: 95%; /* Aumenta el ancho en móviles para aprovechar el espacio */
+    }
+
+    /* Ajustes para los botones de dificultad */
+    #botonmuyfacil,
+    #botonfacil,
+    #botonmedio,
+    #botondificil,
+    #botontodos {
+        margin-top: 10px; /* Añade espacio superior para evitar solapamiento */
+        width: 100%; /* Ocupa el ancho completo en móviles */
+        padding: 10px; /* Ajusta el padding para que se vean mejor en móvil */
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+
+    .content-dificulty {
+        padding-top: 20px; /* Ajusta el padding superior para separar los botones del header */
+    }
+}
+
+/* Columnas de los CTF's adaptado a movil */
+
+@media (max-width: 768px) {
+    .item-title {
+        width: 100%;
+        text-align: left;
+    }
+
+    .badge {
+        width: 25%;
+        text-align: center
+    }
+
+    .size{
+        width: 100%;
+        text-align: center;
+    }
+
+    .actions {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Estilo adaptado para la cabecera en un movil */
+
+/* Estilos generales para el header */
+.header-custom {
+    /*z-index: 2000;*/ /* Asegura que el header esté por encima */
+    /*position: sticky;*/ /* Header pegajoso en la parte superior */
+    top: 0; /* Fijado en la parte superior */
+}
+
+/* Estilos específicos para móviles */
+@media (max-width: 768px) {
+    .header-custom {
+        position: relative; /* Cambia de fixed a relative para no tapar otros elementos */
+        padding: 10px 0; /* Ajusta el padding para más espacio */
+        box-shadow: none; /* Elimina cualquier sombra que lo haga ver sobre otros elementos */
+    }
+
+    .header-content {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    .header-content h1 {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        margin: 15px 0 10px 0; /* Mayor separación superior e inferior */
+    }
+
+    .header-buttons {
+        display: flex; /* Flexbox para los botones */
+        flex-wrap: wrap; /* Permite que los botones se envuelvan si no hay espacio */
+        gap: 5px; /* Espacio entre botones */
+    }
+
+    /* Ajustes para los botones en móvil */
+    .header-buttons button {
+        width: 100%; /* Botones ocupan el ancho completo */
+        padding: 8px; /* Padding reducido para mejor apariencia */
+        font-size: 14px; /* Ajusta el tamaño del texto en los botones */
+    }
+
+    #ranking-btn {
+        margin-top: 5px; /* Espacio adicional para separar del header */
+        margin-left: -18%; 
+        margin-bottom: 20px;
+        width: 80%; /* Ancho completo en móviles */
+    }
+}
+
+/* Estilos para el modal en dispositivos móviles */
+@media (max-width: 767.98px) {
+    .modal-dialog {
+        margin: auto; /* Centra el modal verticalmente */
+        max-width: 95vw; /* Ajusta el ancho máximo al 95% del ancho de la ventana de visualización */
+        width: 95vw; /* Asegura que el modal ocupe el 95% del ancho de la ventana de visualización */
+    }
+
+    /* Opcional: Ajusta el padding para el cuerpo del modal */
+    .modal-body {
+        padding: 1rem;
+    }
+
+    /* Opcional: Ajusta la dirección de los botones del pie del modal */
+    .modal-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Opcional: Ajusta el tamaño de la fuente para el cuerpo del modal */
+    .modal-body p {
+        font-size: 0.8rem;
+    }
+
+    /* Ajusta el tamaño de las imágenes en el modal */
+    .info-author img {
+        width: 25px; /* Ajusta el tamaño de las imágenes */
+    }
+
+    /* Ajusta el tamaño de los íconos en el modal */
+    .info-icon-infomation,
+    .cert-icon-infomation {
+        font-size: 1rem; /* Ajusta el tamaño del ícono */
+    }
+
+    /* Ajusta el tamaño del formulario */
+    #flagForm .form-control {
+        width: 100%; /* Asegura que el formulario ocupe todo el ancho disponible */
+    }
+}
