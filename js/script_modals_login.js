@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('profileBioInput').value = user.bio;
 
             // Calcular y mostrar el porcentaje de flags validadas
-            const totalFlags = 23; // Este es un número de ejemplo; cámbialo según tu caso
+            const totalFlags = 24; // Este es un número de ejemplo; cámbialo según tu caso
             const flagsValidated = user.flags.length;
             const flagsPercentage = (flagsValidated / totalFlags) * 100;
             const progressBar = document.getElementById('flagsProgress');
