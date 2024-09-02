@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('popupOpciones').style.display = 'none';
 
         // Cierra los modales de Bootstrap
-        const modals = ['modalDownload1', 'modalUpload1', 'modalInfo1', 'modalDownload2', 'modalUpload2', 'modalInfo2', 'modalDownload3', 'modalUpload3', 'modalInfo3', 'modalDownload4', 'modalUpload4', 'modalInfo4', 'modalDownload5', 'modalUpload5', 'modalInfo5', 'modalDownload6', 'modalUpload6', 'modalInfo6', 'modalDownload7', 'modalUpload7', 'modalInfo7', 'modalDownload8', 'modalUpload8', 'modalInfo8', 'modalDownload9', 'modalUpload9', 'modalInfo9', 'modalDownload10', 'modalUpload10', 'modalInfo10', 'modalDownload11', 'modalUpload11', 'modalInfo11', 'modalDownload12', 'modalUpload12', 'modalInfo12', 'modalDownload13', 'modalUpload13', 'modalInfo13', 'modalDownload14', 'modalUpload14', 'modalInfo14', 'modalDownload15', 'modalUpload15', 'modalInfo15', 'modalDownload16', 'modalUpload16', 'modalInfo16', 'modalDownload17', 'modalUpload17', 'modalInfo17', 'modalDownload18', 'modalUpload18', 'modalInfo18', 'modalDownload19', 'modalUpload19', 'modalInfo19', 'modalDownload20', 'modalUpload20', 'modalInfo20', 'modalDownload21', 'modalUpload21', 'modalInfo21', 'modalDownload22', 'modalUpload22', 'modalInfo22', 'modalDownload23', 'modalUpload23', 'modalInfo23'];
+        const modals = ['modalDownload1', 'modalUpload1', 'modalInfo1', 'modalDownload2', 'modalUpload2', 'modalInfo2', 'modalDownload3', 'modalUpload3', 'modalInfo3', 'modalDownload4', 'modalUpload4', 'modalInfo4', 'modalDownload5', 'modalUpload5', 'modalInfo5', 'modalDownload6', 'modalUpload6', 'modalInfo6', 'modalDownload7', 'modalUpload7', 'modalInfo7', 'modalDownload8', 'modalUpload8', 'modalInfo8', 'modalDownload9', 'modalUpload9', 'modalInfo9', 'modalDownload10', 'modalUpload10', 'modalInfo10', 'modalDownload11', 'modalUpload11', 'modalInfo11', 'modalDownload12', 'modalUpload12', 'modalInfo12', 'modalDownload13', 'modalUpload13', 'modalInfo13', 'modalDownload14', 'modalUpload14', 'modalInfo14', 'modalDownload15', 'modalUpload15', 'modalInfo15', 'modalDownload16', 'modalUpload16', 'modalInfo16', 'modalDownload17', 'modalUpload17', 'modalInfo17', 'modalDownload18', 'modalUpload18', 'modalInfo18', 'modalDownload19', 'modalUpload19', 'modalInfo19', 'modalDownload20', 'modalUpload20', 'modalInfo20', 'modalDownload21', 'modalUpload21', 'modalInfo21', 'modalDownload22', 'modalUpload22', 'modalInfo22', 'modalDownload23', 'modalUpload23', 'modalInfo23', 'modalDownload24', 'modalUpload24', 'modalInfo24'];
         modals.forEach(modalId => {
             const modalElement = document.getElementById(modalId);
             if (modalElement) {
@@ -234,6 +234,10 @@ function showPopupWithContent(title, author, difficulty, date, imageUrl) {
     document.querySelector('.actions .btnDownload23').addEventListener('click', () => showPopup('modalDownload23', true));
     document.querySelector('.actions .btnUpload23').addEventListener('click', () => showPopup('modalUpload23', true));
     document.querySelector('.actions .btnInfo23').addEventListener('click', () => showPopup('modalInfo23', true));
+
+    document.querySelector('.actions .btnDownload24').addEventListener('click', () => showPopup('modalDownload24', true));
+    document.querySelector('.actions .btnUpload24').addEventListener('click', () => showPopup('modalUpload24', true));
+    document.querySelector('.actions .btnInfo24').addEventListener('click', () => showPopup('modalInfo24', true));
 });
 
 //document.addEventListener('DOMContentLoaded', function() {
