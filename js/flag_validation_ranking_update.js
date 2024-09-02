@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "0xc0ffee": "d6c4a33bec66ea2948f09a0db32335de",
         "memesploit": "b57069733c1fbdf4795c0b36597c307a",
         "jenkhack": "c43cb8e62105280785c7500ba705a9fc",
+        "chmod-4755": "1e4e4054308a62a2bbaacd02074f1ad2",
         // Agrega más flags para otras máquinas aquí
     };
 
