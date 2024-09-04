@@ -323,4 +323,22 @@ document.querySelectorAll('.item').forEach(item => {
 });
 
 
+// Para que los botones mantengan su color al ser pulsados y cuando se pulsa otro desaparece el anterior para que se ponga en el nuevo
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los botones
+    const botones = document.querySelectorAll('.content-dificulty button');
+    
+    // Añade un listener de eventos a cada botón
+    botones.forEach(boton => {
+        boton.addEventListener('click', () => {
+            // Elimina la clase activa de todos los botones
+            botones.forEach(b => b.classList.remove('btn-success'));
+            botones.forEach(b => b.classList.add('btn-outline-success'));
+            
+            // Añade la clase activa solo al botón clicado
+            boton.classList.remove('btn-outline-success');
+            boton.classList.add('btn-success');
+        });
+    });
+});
