@@ -186,15 +186,15 @@ button:hover {
 }
 
 /* Ajuste específico para el botón "Todos" */
-#botontodos {
+/*#botontodos {
     background-color: #4caf50;
     border: none;
     color: white;
-    padding: 8px 20px;
+    padding: 8px 20px;*/
     /* Ajusta el padding para cambiar la altura y el ancho del botón */
-    font-size: 15px;
+    /*font-size: 15px;*/
     /* Ajusta el tamaño del texto */
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     /* Añade espacio superior para separar el botón si es necesario */
 }
 
