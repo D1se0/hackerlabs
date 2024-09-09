@@ -1,0 +1,1542 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5; /* Fondo claro */
+    color: #333333; /* Texto oscuro para contraste */
+    font-family: 'Fira Code', monospace;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+.header-container h1 {
+    margin: 0;
+    padding-left: 20px;
+    color: #333333; /* Color oscuro para el título */
+    font-weight: bold; /* Negrita para el título */
+}
+
+.header-container .return-button {
+    background-color: #4caf50; /* Botón verde */
+    border: none;
+    color: white;
+    padding: 12px 30px; /* Tamaño aumentado del botón */
+    font-size: 16px; /* Tamaño del texto aumentado */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* Negrita para el texto del botón */
+}
+
+.header-container .return-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.header-container .return-button:focus {
+    outline: none;
+}
+
+.button-container {
+    text-align: right;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #f4f4f4; /* Fondo claro */
+    color: #333333; /* Texto oscuro para buen contraste */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff; /* Fondo blanco para el header */
+    color: #333333;
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0; /* Línea divisoria sutil */
+}
+
+header h1 a {
+    color: #4caf50; /* Color del enlace */
+    text-decoration: none;
+}
+
+.text-decoration-none {
+    color: black;
+    margin-right: -180px;
+}
+
+@media (max-width: 768px) {
+    .text-decoration-none {
+        margin-right: 0px;
+    }
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+button {
+    background-color: #4caf50; /* Color de fondo del botón */
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+.badge {
+    background-color: #4caf50; /* Color de fondo de los badges */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.facil .badge {
+    background-color: #a5d6a7; /* Verde claro para fácil */
+}
+
+.medio .badge {
+    background-color: #ffd54f; /* Amarillo claro para medio */
+}
+
+.dificil .badge {
+    background-color: #e57373; /* Rojo claro para difícil */
+}
+
+.muy-facil .badge {
+    background-color: #4db6ac; /* Verde agua para muy fácil */
+    font-size: 11px;
+}
+
+/* Class for default difficulty (if needed) */
+.default-difficulty .badge {
+    background-color: #b0bec5; /* Gris claro para dificultad predeterminada */
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #4caf50; /* Borde del campo de búsqueda */
+    border-radius: 4px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333333;
+}
+
+#search::placeholder {
+    color: #9e9e9e; /* Color del texto del placeholder */
+}
+
+.item {
+    background-color: #ffffff; /* Fondo blanco para los ítems */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.item:hover {
+    background-color: #f1f1f1; /* Fondo al pasar el ratón */
+}
+
+.actions .bi {
+    color: #4caf50; /* Color de los íconos de acciones */
+}
+
+.actions .bi:hover {
+    color: #45a049; /* Color de los íconos al pasar el ratón */
+}
+
+.item-title,
+.badge,
+.size,
+.actions {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item-title {
+    width: 30%;
+    text-align: left;
+}
+
+.badge {
+    width: 20%;
+    text-align: center;
+}
+
+.size {
+    width: 15%;
+    text-align: center;
+}
+
+.actions {
+    width: 35%;
+    text-align: right;
+}
+
+.row>.col-md-6 {
+    margin-bottom: 20px;
+}
+
+#botonmuyfacil,
+#botonfacil,
+#botonmedio,
+#botondificil,
+#botontodos {
+    padding: 8px 20px;
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+@media (max-width: 768px) {
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .badge {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+.content-dificulty {
+    padding: 15px 30px;
+    margin-top: -30px;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo del overlay más claro */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #ffffff; /* Fondo blanco para el popup */
+    color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.popup-text {
+    width: 70%;
+}
+
+.popup-logo {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.popup-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e57373; /* Color del botón de cerrar */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    background: #d32f2f; /* Color al pasar el ratón */
+}
+
+.difficulty span {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+.muy-facil .difficulty span {
+    background-color: #4db6ac; /* Verde agua para Muy Fácil */
+}
+
+.facil .difficulty span {
+    background-color: #a5d6a7; /* Verde claro para Fácil */
+}
+
+.medio .difficulty span {
+    background-color: #ffd54f; /* Amarillo claro para Medio */
+}
+
+.dificil .difficulty span {
+    background-color: #e57373; /* Rojo claro para Difícil */
+}
+
+#popupOpciones {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo del overlay más claro */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #ffffff; /* Fondo blanco para el popup */
+    color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.popup-text {
+    width: 100%;
+    text-align: center;
+}
+
+.popup-logo {
+    display: none;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e57373; /* Color del botón de cerrar */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    background: #d32f2f; /* Color al pasar el ratón */
+}
+
+.options-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.option-item {
+    background: #e0e0e0; /* Fondo claro para los ítems de opción */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.option-item:hover {
+    background-color: #b0bec5; /* Fondo al pasar el ratón */
+    transform: scale(1.05); /* Ampliar ligeramente al pasar el ratón */
+}
+
+.option-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    background-color: #ffffff; /* Fondo blanco para el pie de página */
+    color: #333333;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0; /* Línea divisoria sutil */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+.info-author img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.info-author a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.info-author a:hover {
+    color: #4caf50; /* Color del enlace al pasar el ratón */
+    transform: scale(1.1);
+}
+
+/* Asegura que el botón de cierre sea visible */
+.modal-dialog .modal-content .btn-close {
+    background: transparent;
+    border: none;
+    color: #333; /* Color del botón de cierre */
+    font-size: 1.2rem;
+    opacity: 1;
+}
+
+.modal-dialog .modal-content .btn-close::before {
+    content: '×';
+    font-size: 1.2rem;
+    color: #333; /* Color del botón de cierre */
+}
+
+/* Ajusta el tamaño del modal */
+.modal-dialog {
+    max-width: 40%;
+    margin: 30px auto;
+}
+
+.modal-content {
+    border-radius: 8px;
+    border: none;
+    background-color: #ffffff; /* Fondo blanco para el modal */
+    color: #333; /* Color del texto en el modal */
+}
+
+.modal-header {
+    background-color: #f1f1f1; /* Fondo claro para el encabezado del modal */
+    color: #333; /* Color del texto en el encabezado */
+    border-bottom: 1px solid #ddd; /* Línea divisoria sutil */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-body {
+    padding: 20px;
+    color: #333; /* Color del texto en el cuerpo del modal */
+    text-align: center;
+}
+
+.modal-footer {
+    background-color: #f1f1f1; /* Fondo claro para el pie del modal */
+    border-top: 1px solid #ddd; /* Línea divisoria sutil */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Estilos nombres del botón de opciones */
+#options-hacking-community,
+#options-academy,
+#options-hackerlabsCtfs-tool,
+#options-sobre-nosotros,
+#options-send-machine,
+#autor-writeup {
+    text-decoration: none;
+    color: #333; /* Color del texto de los botones de opciones */
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        max-width: 90%;
+        padding: 10px;
+    }
+}
+
+/* Ajusta la imagen del popup de forma automática */
+#popupImage {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajuste para el botón de Ranking */
+#ranking-btn {
+    margin-right: -5rem;
+    margin-left: -10rem;
+}
+
+/* Estilo del fondo oscuro del popup */
+.popup-overlay-ranking {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del contenido del popup del ranking */
+.popup-content-ranking {
+    background-color: #ffffff; /* Fondo blanco para el popup */
+    color: #333; /* Color del texto claro */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Estilo del botón de cierre del ranking */
+.btn-close-ranking {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: #333; /* Color del botón de cierre */
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn-close-ranking:hover {
+    color: #4caf50; /* Cambia el color de la 'X' al pasar el ratón */
+    border-radius: 50%;
+}
+
+/* Estilo del modal de Bootstrap */
+.modal-content {
+    background-color: #ffffff; /* Fondo blanco para el modal */
+    color: #333; /* Color del texto en el modal */
+    border-radius: 8px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+/* Estilo para el encabezado del ranking */
+.popup-content-ranking h3 {
+    background-color: #f1f1f1; /* Fondo claro para el encabezado */
+    color: #333; /* Color del texto en el encabezado */
+    padding: 0.5rem;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Estilo para la tabla de ranking */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.ranking-table th, .ranking-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+.ranking-table thead {
+    background-color: #f1f1f1; /* Fondo claro para los encabezados de la tabla */
+    color: #333; /* Color del texto en los encabezados */
+}
+
+.ranking-table tbody tr:nth-child(even) {
+    background-color: #fafafa; /* Color de fondo para filas pares */
+}
+
+.ranking-table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Color de fondo para filas impares */
+}
+
+.ranking-table tbody tr:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+}
+
+#copyright-style {
+    text-decoration: none;
+    color: #333; /* Color del texto del copyright */
+}
+
+/* Cinta roja de advertencia */
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.ribbon {
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    width: 200px;
+    padding: 5px 0;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    font-size: 14px;
+}
+
+.ribbon::before, .ribbon::after {
+    content: "";
+    position: absolute;
+    border: 5px solid red;
+    z-index: -1;
+}
+
+.ribbon::before {
+    top: 100%;
+    left: 0;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.ribbon::after {
+    bottom: 100%;
+    right: 0;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+/* Estilos para la lista de técnicas y certificaciones */
+.info-list-infomation, .cert-list-infomation {
+    margin: 0;
+    padding: 0;
+}
+
+.info-item-infomation, .cert-item-infomation {
+    display: flex;
+    align-items: center;
+    color: #333; /* Color del texto en la lista de información */
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.info-icon-infomation, .cert-icon-infomation {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.cert-item-infomation {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.cert-icon-infomation {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+/* Estilo para las líneas de separación */
+hr {
+    border: none;
+    border-top: 1px solid #ddd; /* Línea divisoria sutil */
+    margin: 20px 0;
+}
+
+/* Estilo botones siguiente y anterior */
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#pagination button:hover {
+    background-color: #45a049;
+}
+
+#pagination button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+/* Ajustes generales para adaptación a móvil */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        margin: 5px 0;
+        padding: 10px 5px;
+    }
+
+    .actions .bi {
+        font-size: 1rem;
+    }
+}
+
+/* Mejoras para el header en versión móvil */
+header {
+    background-color: #ffffff; /* Fondo blanco para el header */
+    color: #333; /* Color del texto en el header */
+    z-index: 2000;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ajustes específicos para móvil */
+@media (max-width: 768px) {
+    header {
+        padding: 8px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    /* Ajustes para los botones de dificultad */
+    #botonmuyfacil,
+    #botonfacil,
+    #botonmedio,
+    #botondificil,
+    #botontodos {
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .content-dificulty {
+        padding-top: 20px;
+    }
+}
+
+/* Columnas de los CTF's adaptado a móvil */
+@media (max-width: 768px) {
+    .item-title {
+        width: 100%;
+        text-align: left;
+    }
+
+    .badge {
+        width: 25%;
+        text-align: center
+    }
+
+    .size {
+        width: 100%;
+        text-align: center;
+    }
+
+    .actions {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Estilo adaptado para la cabecera en un móvil */
+.header-custom {
+    top: 0;
+}
+
+/* Estilos específicos para móviles */
+@media (max-width: 768px) {
+    .header-custom {
+        position: relative;
+        padding: 10px 0;
+        box-shadow: none;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content h1 {
+        font-size: 18px;
+        margin: 15px 0 10px 0;
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .header-buttons button {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #ranking-btn {
+        margin-top: 5px;
+        margin-left: -18%;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+}
+
+/* Estilos para el modal en dispositivos móviles */
+@media (max-width: 767.98px) {
+    .modal-dialog {
+        margin: auto;
+        max-width: 95vw;
+        width: 95vw;
+    }
+
+    .modal-body {
+        padding: 1rem;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .modal-body p {
+        font-size: 0.8rem;
+    }
+
+    .info-author img {
+        width: 25px;
+    }
+
+    .info-icon-infomation,
+    .cert-icon-infomation {
+        font-size: 1rem;
+    }
+
+    #flagForm .form-control {
+        width: 100%;
+    }
+}
+
+/* Decoración del texto de CTF's Totales */
+#number-ctfs-style {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333; /* Color del texto de CTF's Totales */
+    padding: 0px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.modal-dialog .modal-content .btn-close {
+    background: transparent;
+    border: none;
+    color: #333333;
+    font-size: 1.2rem;
+    opacity: 1;
+}
+
+.modal-dialog .modal-content .btn-close:hover {
+    color: #00796b;
+}
+
+/* Estilo de botones de autenticación */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Estilos del popup de login */
+.popup-overlay-login {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content-login {
+    background-color: #ffffff; /* Fondo blanco para el modal */
+    color: #333; /* Color del texto en el modal */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px; /* Ajustado a un tamaño más adecuado */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
+    margin: auto; /* Centra el modal horizontalmente */
+    margin-top: 50px; /* Ajusta la distancia desde la parte superior de la pantalla */
+}
+
+/* Estilo de la cabecera del modal */
+.popup-content-login h2 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center; /* Centra el texto del título */
+    color: #333; /* Color del texto del título */
+}
+
+/* Estilo del botón de cerrar */
+.btn-close-general {
+    position: absolute;
+    top: 10px; /* Ajusta según la altura del modal */
+    right: 10px; /* Ajusta según el ancho del modal */
+    background: #d83c31;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px; /* Centra el texto verticalmente */
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Añadido para mejor visibilidad */
+    display: flex; /* Usa flexbox para alinear el contenido */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-close-general:hover {
+    background: #c32d1e;
+}
+
+/* Estilos específicos para el modal de inicio de sesión */
+#loginModal .popup-content-login {
+    width: 90%;
+    max-width: 500px; /* Ajustado para el ancho del modal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto; /* Centra el modal horizontalmente */
+}
+
+#loginModal input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #4caf50;
+    border-radius: 6px;
+    background-color: #f9f9f9; /* Fondo claro para los campos de entrada */
+    color: #333; /* Color del texto en los campos de entrada */
+    margin-bottom: 15px;
+}
+
+#loginModal input:focus {
+    border-color: #45a049;
+    outline: none;
+}
+
+#loginModal button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto;
+}
+
+#loginModal button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos específicos para el modal de perfil */
+#profileModal .popup-content-login {
+    width: 90%;
+    max-width: 500px; /* Ajustado para hacerlo un poco más ancho */
+    margin-top: 70px; /* Distancia desde la parte superior de la pantalla */
+}
+
+#profileModal input,
+#profileModal textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #4caf50;
+    border-radius: 6px;
+    background-color: #f9f9f9; /* Fondo claro para los campos de entrada */
+    color: #333; /* Color del texto en los campos de entrada */
+    margin-bottom: 15px;
+}
+
+#profileModal input:focus,
+#profileModal textarea:focus {
+    border-color: #45a049;
+    outline: none;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+.profile-actions button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.save-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+}
+
+.logout-button {
+    background-color: #d83c31;
+    color: white;
+}
+
+.logout-button:hover {
+    background-color: #c32d1e;
+}
+
+/* Estilos específicos para el modal de flags */
+#flagsModal .popup-content-login {
+    width: 90%;
+    max-width: 500px; /* Ajustado para el ancho del modal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto; /* Centra el modal horizontalmente */
+}
+
+#validatedFlagsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo del contenedor de progreso */
+.progress-container {
+    width: 100%;
+    background-color: #f9f9f9; /* Fondo claro para el contenedor de progreso */
+    border-radius: 6px;
+    margin: 15px 0;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 35px; /* Ajustar la altura total para incluir la barra y el texto */
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    color: white;
+    height: 25px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 25px; /* Centra el texto verticalmente */
+    font-size: 16px;
+    width: 0; /* Inicialmente el progreso está en 0% */
+    position: absolute;
+    top: 5px; /* Espaciado desde el borde superior para centrar dentro del contenedor */
+    left: 0;
+}
+
+.progress-text {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #333; /* Color del texto del progreso */
+    font-weight: bold;
+    z-index: 1; /* Mantener el texto encima de la barra */
+    pointer-events: none; /* Evita que el texto interfiera con clics */
+}
+
+.flags-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    width: calc(100% - 20px); /* Ancho del botón igual al contenedor menos padding */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+.flags-button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+    }
+
+    .auth-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .popup-content-login {
+        width: 95%;
+    }
+
+    #profileModal input,
+    #profileModal textarea,
+    #loginModal input {
+        width: calc(100% - 20px);
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-actions button {
+        width: 100%;
+    }
+
+    .progress-bar {
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .flags-button {
+        width: 100%;
+    }
+}
+
+/* Estilos del popup de creadores */
+.creator-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Reducido para un fondo más suave */
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+}
+
+.creator-popup-content {
+    background-color: #ffffff; /* Fondo blanco para el popup */
+    color: #333333; /* Color del texto en el popup */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ajustado para un efecto más sutil */
+    animation: fadeIn 0.5s ease;
+    max-height: 80vh; /* Limita la altura del popup */
+    overflow-y: auto; /* Añade una barra de desplazamiento si es necesario */
+}
+
+.creator-popup-content h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #ff4c4c; /* Mantiene el color del título */
+}
+
+/* Estilo del botón de cerrar */
+.creator-btn-close {
+    position: absolute;
+    top: 10px; /* Ajusta esta posición si es necesario */
+    right: 10px; /* Ajusta esta posición si es necesario */
+    background: #d83c31;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    font-size: 16px; /* Ajusta el tamaño de la X si es necesario */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.creator-btn-close:hover {
+    background: #e04444;
+}
+
+/* Estilo para la lista de creadores */
+.creator-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.creator-item {
+    background-color: #f1f1f1; /* Fondo claro para los elementos de la lista */
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.creator-item:hover {
+    background-color: #e0e0e0; /* Cambio de color al pasar el ratón */
+}
+
+.creator-item span {
+    font-size: 16px;
+    color: #333333; /* Color del texto de los elementos */
+}
+
+.creator-item .rank {
+    font-weight: bold;
+    color: #ff4c4c; /* Color para el rango */
+}
+
+.creator-item .name {
+    flex: 1;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.creator-item .machines {
+    font-style: italic;
+    color: #888888; /* Color más claro para las máquinas */
+}
+
+/* Animación de aparición del popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Tema dinámico modo oscuro/claro */
+/* Contenedor del toggle */
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+/* Botón del toggle */
+#toggleButton {
+    display: flex;
+    align-items: center;
+    background: #ccc; /* Color para modo claro */
+    border: none;
+    border-radius: 20px;
+    margin-left: -80px;
+    margin-right: -300px;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    width: 120px;
+    height: 40px;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Asegura que padding y border no expandan el tamaño total */
+}
+
+/* Iconos de sol y luna */
+.emoji {
+    font-size: 1.5rem;
+    z-index: 1; /* Mantener los iconos por encima del slider */
+}
+
+/* Posicionamiento de los iconos */
+.sun {
+    position: absolute;
+    left: 10px;
+}
+
+.moon {
+    position: absolute;
+    right: 10px;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    top: 5px; /* Alineación vertical */
+    left: 5px; /* Alineación inicial en modo claro */
+    width: 40px;
+    height: 30px;
+    background: #fff; /* Color inicial del slider */
+    border-radius: 20px;
+    transition: transform 0.3s, background-color 0.3s;
+    transform: translateX(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar un efecto flotante */
+}
+
+/* Modo oscuro */
+body.dark-mode #toggleButton {
+    background: #444; /* Fondo del botón en modo oscuro */
+}
+
+body.dark-mode .slider {
+    background: #222; /* Fondo del slider en modo oscuro */
+}
+
+@media (max-width: 768px) {
+    #toggleButton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+/* Estilos generales para la barra de desplazamiento en navegadores basados en WebKit para modo claro */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+    height: 10px; /* Altura de la barra de desplazamiento para desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-gray-2); /* Color del "pulgar" de la barra de desplazamiento en modo claro */
+    border-radius: 5px; /* Bordes redondeados del "pulgar" */
+    border: 2px solid var(--light-gray-1); /* Borde alrededor del "pulgar" para crear espacio */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-gray-3); /* Color del "pulgar" al pasar el ratón por encima en modo claro */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--light-gray-1); /* Color de fondo de la pista de la barra de desplazamiento en modo claro */
+    border-radius: 5px; /* Bordes redondeados de la pista */
+}
+
+/* Soporte para la personalización de la barra de desplazamiento en Firefox para modo claro */
+.scroll-container {
+    scrollbar-width: thin; /* Estilo de la barra de desplazamiento: thin, auto, none */
+    scrollbar-color: var(--light-gray-2) var(--light-gray-1); /* Color del pulgar y de la pista en modo claro */
+}
+
+/* Aplicación específica para una sección o clase */
+.content pre::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content pre::-webkit-scrollbar-thumb {
+    background-color: var(--light-gray-2);
+    border-radius: 4px;
+}
+
+.content pre::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-gray-3);
+}
+
+.content pre::-webkit-scrollbar-track {
+    background-color: var(--light-gray-1);
+    border-radius: 4px;
+}
+
+:root {
+    --light-gray-1: #e0e0e0; /* Fondo de la pista */
+    --light-gray-2: #c0c0c0; /* Pulgar de la barra */
+    --light-gray-3: #a0a0a0; /* Pulgar en hover */
+}
